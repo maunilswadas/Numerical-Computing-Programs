@@ -1,0 +1,4 @@
+bokeh==1.0.4
+numpy==1.16.2
+flask==1.0.2
+flask_cors==3.0.7
