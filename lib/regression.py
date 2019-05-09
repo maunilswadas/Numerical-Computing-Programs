@@ -4,8 +4,8 @@ from numpy.linalg import inv
 
 def regression(points, degree = 1):
     points = numpy.array(points)
-    min_point = -1
-    max_point = 8
+    min_point = -9
+    max_point = 9
     
     X = np.matlib.empty((degree + 1,degree + 1))
     Y = np.matlib.empty((degree + 1,1))
@@ -29,9 +29,9 @@ def regression(points, degree = 1):
     x = []
     y = []
 
-    for i in range(min_point*10,max_point*10):
-        x.append(i/10)
-        y.append(np.sum([np.power(i/10,power)*ai[0] for power, ai in enumerate(coeff)]))
+    for i in range(min_point*20,max_point*20):
+        x.append(i/20)
+        y.append(np.sum([np.power(i/20,power)*ai[0] for power, ai in enumerate(coeff)]))
 
     return {"x":x, "y":y}
 
