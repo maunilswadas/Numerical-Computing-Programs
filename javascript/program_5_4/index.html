@@ -9,75 +9,54 @@
 
 <body>
 <div style="">
-    <h1>Bisection Method</h1>
+    <h1>Secant Method</h1>
     <table border="2px solid black" style="border-collapse: collapse;display: inline-block">
-        <tr>
+        <tr onclick="fetchData(1)">
             <td>1</td>
             <td>x<sup>2</sup> - 4</td>
-            <td>
-                <button onclick="fetchData(1)">select</button>
-            </td>
         </tr>
-        <tr>
+        <tr onclick="fetchData(2)">
             <td>2</td>
             <td>-x<sup>2</sup> + 4x + 5</td>
-            <td>
-                <button onclick="fetchData(2)">select</button>
-            </td>
         </tr>
-        <tr>
+        <tr onclick="fetchData(3)">
             <td>3</td>
             <td>x<sup>3</sup> - 3x<sup>2</sup> - 9x - 10</td>
-            <td>
-                <button onclick="fetchData(3)">select</button>
-            </td>
         </tr>
-        <tr>
+        <tr onclick="fetchData(4)">
             <td>4</td>
             <td>x<sup>2</sup> - 2x + 3</td>
-            <td>
-                <button onclick="fetchData(4)">select</button>
-            </td>
         </tr>
-        <tr>
+        <tr onclick="fetchData(5)">
             <td>5</td>
             <td>2x<sup>3</sup> - 10x<sup>2</sup> + 11x - 5</td>
-            <td>
-                <button onclick="fetchData(5)">select</button>
-            </td>
         </tr>
-        <tr>
+        <tr onclick="fetchData(6)">
             <td>6</td>
             <td>e<sup>-x</sup> - x</td>
-            <td>
-                <button onclick="fetchData(6)">select</button>
-            </td>
         </tr>
-        <tr>
+        <tr onclick="fetchData(7)">
             <td>7</td>
             <td>x - e<sup>1/x</sup></td>
-            <td>
-                <button onclick="fetchData(7)">select</button>
-            </td>
         </tr>
     </table>
 
     <table border="2px solid black" style="border-collapse: collapse;display: inline-block">
         <tr>
             <td>x_min:</td>
-            <td><label><input onchange="fetchData(1)" type="number" id="x_min" value="-0.25"/></label></td>
+            <td><label><input type="number" id="x_min" value="-0.25"/></label></td>
         </tr>
         <tr>
             <td>x_max:</td>
-            <td><label><input onchange="fetchData(1)" type="number" id="x_max" value="3.5"/></label></td>
+            <td><label><input type="number" id="x_max" value="3.25"/></label></td>
         </tr>
         <tr>
             <td>tolerance:</td>
-            <td><label><input onchange="fetchData(1)" type="number" id="tolerance" value="0.0001"/></label></td>
+            <td><label><input type="number" id="tolerance" value="0.0001"/></label></td>
         </tr>
         <tr>
             <td>maximum_iterations:</td>
-            <td><label><input onchange="fetchData(1)" type="number" id="maximum_iterations" value="20"/></label></td>
+            <td><label><input type="number" id="maximum_iterations" value="20"/></label></td>
         </tr>
     </table>
 </div>
