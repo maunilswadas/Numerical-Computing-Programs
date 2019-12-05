@@ -8,7 +8,10 @@ class Buckets:
         self.rMin  = 0
         self.rMax  = 0
         self.width = 0
-        
+    
+    def reset(self):
+        self.counters = [0]*self.n
+    
     def get(self, i):
         return self.counters[i]
     
@@ -21,10 +24,11 @@ class Buckets:
         self.width = (rMax - rMin)/self.n
 
     def put(self, r):
-        if r < self.rMin or r > self.rMax: return
+        if r < self.rMin or r > self.rMax: return self.counters
 
         i = floor((r - self.rMin)/self.width)
         self.counters[i] += 1
+        return self.counters
         
     def print_buckets(self):
         maxCount = 0;
