@@ -25,6 +25,7 @@ def function_points(f):
     x_points = []
     y_points = []
     for x in range(-100, 100):
+        if x == 0: continue
         x_points.append(x / 10)
         y_points.append(f(x / 10))
     return (x_points, y_points)
